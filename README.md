@@ -16,6 +16,13 @@
 
 ## Submission Drive Links
 
+- 2x2 tiles
+https://drive.google.com/drive/folders/1HmF-yd6DLVV5bAPGl6hC3--ojxrjhct0?usp=sharing_eip_se_dm&ts=63e3d921
+
+- Final Atlas
+https://drive.google.com/drive/folders/1AlsNVxCAYomUHkd641Qv8PnI_gg1RQlV
+
+- Please find the high resolution `.tif` stitched images produced after super resolution on TMC images using model-a: SRGAN and model-b: SWIN-IR in the [google drive link here](https://drive.google.com/drive/folders/13D6NqVb8-7Jh9N6xMV3W8qPvrCMLBScP?usp=share_link).
 
 ## Repository Directory Structure
 
