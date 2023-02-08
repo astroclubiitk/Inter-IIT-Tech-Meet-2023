@@ -6,7 +6,6 @@
 - [Objective](#objective)
 - [Submission Drive Links](#submission-drive-links)
 - [Repository Directory Structure](#repository-directory-structure)
-- [Pipeline](#pipeline)
 - [Acknowledgement](#acknowledgement)
 
 ## Objective
@@ -38,14 +37,11 @@ parti-ii-lunar-atlas-stitching/
 dataset-cleaning-and-analysis/
     - README
     - python notebooks
+    - scripts
     - assets/ (contain images of analysis and findings)
 ```
 
 ![](assets/repository.png)
-
-## Pipeline
-
-![](assets/pipeline.png)
 
 ## Acknowledgement
 
