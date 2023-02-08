@@ -1,8 +1,9 @@
-# Image Stitching and Atlas Creation
+# Part 2: Image Stitching and Atlas Creation
 
 ## Table of Contents
 
 - [Overview](#overview)
+- [Output Stitched Images](#output-stitched-images)
 - [Files](#files)
     - [Empty_tiles.m](#empty_tilesm)
     - [Populate_tiles.m](#populate_tilesm)
@@ -12,6 +13,10 @@
 ## Overview
 
 For image stitching and atlas creation, we opted to use the most popular software used by researchers all around the globe i.e. MATLAB because of it's versitality and default multi-threaded matrix operations which proved invaluable in handing images. Ours is a 3-step approach, with the following files denoting the 3 steps:
+
+## Output: Stitched Images
+
+Please find the high resolution `.tif` stitched images produced after super resolution on TMC images using model-a: SRGAN and model-b: SWIN-IR in the [google drive link here](https://drive.google.com/drive/folders/13D6NqVb8-7Jh9N6xMV3W8qPvrCMLBScP?usp=share_link).
 
 ## Files
 
