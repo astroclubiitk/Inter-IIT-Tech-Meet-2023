@@ -1,4 +1,4 @@
-# SwinIR Implementation
+# SwinIR-PyTorch Implementation
 
 ## Overview
 
@@ -20,26 +20,19 @@
 
 ## Datasets
 
-- We used 2 types of datasets for fine tuning the model
-- One, in which the model takes a high resolution image as input and crops in several images of 96x96, creates its 4 times downsampled counterpart and trains over that data. (data size = 750 images)
-- Another, in which we manually feed both high resolution and corresponding low resolution image, the high resoltion image is a 96x96 NAC image while the low resoltion image is a 24x24 TMC2 image such that the corner coordinates of both the images are same. (data size = 13243 images)
-
-- [Google Drive](https://drive.google.com/drive/folders/1HPzvEQHVjSSQeGu2WyX8IHNLsrY-HzBs?usp=share_link)
-- Download the above folder, replace it with the train_data directory in the file system and unzip both `train.zip` and `test.zip` files in the `train_data` folder
-- The first type of dataset we used for training will be present in `train_data/train/NAC_highres_dataset`
-- The second type of dataset we used for training will be present in `train_data/train/TMC2NAC_dataset`
-- The validation data to be used along with training will be present in `train_data/test`
-
-- [Google Drive](https://drive.google.com/drive/folders/1Ac0Pirfl5W8RqUe_kEUx7c6mos3ueDcY?usp=share_link)
-- From the above folder download `dim_1x.zip` place it in `./generate_data/TMC2`, unzip the zip file here
-
+- [Google Drive](https://drive.google.com/file/d/1boCR3boKfQRaq0yukc_wm9tqSFkV0Ba-/view?usp=share_link)
+- Download the zip file in above link. Place it in the train_data directory in the file system, unzip `train.zip` here and use the `final/high` directory path in the `dataroot_H` (in datasets/train and dataset/test) while training and place the `datarootL` = null. Run the instructions for training the model.
+-(By specifying the dataroot_L = null the model internally does bicubic downsampling and uses 96x96 input images for training).
+- [Google Drive](https://drive.google.com/file/d/1vUR8wNgacHdNdCQ_k-FnP-mdiOE9tHMA/view?usp=share_link)
+- Download the `dim1x.zip` file in the above link and place it in the testsets directory and use the same path in folder_lq while testing to generate 16x upscaled image in the results directory.
+- 
 Note : The current working directory running the bash commands should be `swinir_implementation`.
 
 ## Weights
 
 The pretrained weights of the generator model can be found in the link below
 
-```https://drive.google.com/drive/folders/1mQeAeYpQtKvvvwAWPHvUMaK3taEaUKUr?usp=share_link```
+```https://drive.google.com/drive/folders/1mQeAeYpQtKvvvwAWPHvUMaK3taEaUKUr?usp=share_link``` and can be placed in the model_zoo/swinir directory
 
 ## How to configure the model for training
 
@@ -74,13 +67,3 @@ After setting the above variables, run the following command
 ```python main_test_swinir.py --task lightweight_sr --scale 4 --model_path model_path_name --folder_lq lr_images_path_name --folder_gt ''```
 
 The final generated upscaled images are stored in `results/swinir_sr_lightweight_x4`
-
-## Sample Input Output Images
-
-Input:
-
-<span align="center"><img width="240" height="360" src="figure/input.png"/></span>
-
-Output: 
-
-<span align="center"><img width="240" height="360" src="figure/output.png"/></span>
