@@ -46,8 +46,7 @@
 - [Google Driver](https://drive.google.com/drive/folders/1Ac0Pirfl5W8RqUe_kEUx7c6mos3ueDcY?usp=share_link)
 - From the above folder download `dim_1x.zip` place it in `./generate_data/TMC2`, unzip the zip file here
 
-
-## How to Train, Genearte and Evaluate
+## How to Train, Generate and Evaluate
 
 All three training, testing and evaluation only need to modify the `./srgan_config.py` file.
 For all the bash commands current working directory is expected to be `SRGAN-implementation`
@@ -99,14 +98,11 @@ python evaluation.py
 
 ### Installations
 
-`pip install opencv-python`
-`pip install numpy`
-`pip install tqdm`
-`pip install torch`
-`pip install torchvision`
-`pip install natsort`
-`pip install typing`
-`pip install scipy`
+```bash
+pip install opencv-python numpy tqdm torch torchvision natsort typing scipy
+## or
+pip install -r requirements.txt
+```
 
 Input:
 
