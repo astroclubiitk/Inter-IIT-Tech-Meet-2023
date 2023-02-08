@@ -1,4 +1,4 @@
-# SwinIR-PyTorch Implementation
+# SwinIR Implementation
 
 ## Overview
 
@@ -20,19 +20,17 @@
 
 ## Datasets
 
-- [Google Drive](https://drive.google.com/file/d/1boCR3boKfQRaq0yukc_wm9tqSFkV0Ba-/view?usp=share_link)
-- Download the zip file in above link. Place it in the train_data directory in the file system, unzip `train.zip` here and use the `final/high` directory path in the `dataroot_H` (in datasets/train and dataset/test) while training and place the `datarootL` = null. Run the instructions for training the model.
--(By specifying the dataroot_L = null the model internally does bicubic downsampling and uses 96x96 input images for training).
-- [Google Drive](https://drive.google.com/file/d/1vUR8wNgacHdNdCQ_k-FnP-mdiOE9tHMA/view?usp=share_link)
-- Download the `dim1x.zip` file in the above link and place it in the testsets directory and use the same path in folder_lq while testing to generate 16x upscaled image in the results directory.
-- 
-Note : The current working directory running the bash commands should be `swinir_implementation`.
+- Download the zip file in link [Google Drive](https://drive.google.com/file/d/1boCR3boKfQRaq0yukc_wm9tqSFkV0Ba-/view?usp=share_link). Place it in the `train_data` directory in the file system, unzip `final.zip` here and use the `final/high` directory path in the `dataroot_H` (in datasets/train and dataset/test) while training and place the `dataroot_L` = null. Run the instructions for training the model.
+- By specifying the `dataroot_L` = null the model internally does bicubic downsampling and uses 96x96 input images for training.
+- Download the `dim1x.zip` file in the link [Google Drive](https://drive.google.com/file/d/1vUR8wNgacHdNdCQ_k-FnP-mdiOE9tHMA/view?usp=share_link) and place it in the testsets directory and use the same path in folder_lq while testing to generate 16x upscaled image in the results directory.
 
 ## Weights
 
 The pretrained weights of the generator model can be found in the link below
 
 ```https://drive.google.com/drive/folders/1mQeAeYpQtKvvvwAWPHvUMaK3taEaUKUr?usp=share_link``` and can be placed in the model_zoo/swinir directory
+
+Note : The current working directory running the bash commands should be `swinir_implementation`.
 
 ## How to configure the model for training
 
